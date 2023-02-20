@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01e44651a5708b64e962c0e3d9d9800d, type: 3}
+  m_Name: Level9
+  m_EditorClassIdentifier: 
+  listRoomBase:
+  - {fileID: 7092104232568162033, guid: cd1b4af68b44f11418a525b13ec4fc3e, type: 3}
+  - {fileID: 6481599664367676633, guid: 697dcfb9985f30747a648af5e6640088, type: 3}
+  - {fileID: 7467773371892753465, guid: 195397ca1c032ef45b48ef268b693781, type: 3}
+  - {fileID: 292904131983601480, guid: bdc060ccef4d5b8458b43e82d781694c, type: 3}
+  - {fileID: 3701471399179960762, guid: 742c2caf72cc4f8428defb5d59a06308, type: 3}

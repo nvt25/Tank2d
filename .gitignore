@@ -1,0 +1,9 @@
+/Library/
+/Logs/
+/obj/
+/UserSettings/
+/.vsconfig
+/Tank2D.sln
+*.csproj
+/.vs/
+/Temp/
