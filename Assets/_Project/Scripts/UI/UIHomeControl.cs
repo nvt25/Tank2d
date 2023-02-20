@@ -26,6 +26,10 @@ public class UIHomeControl : BaseUIControl
         btnLevel.onClick.AddListener(OnclickLevel);
         btnShop.onClick.AddListener(OnclickShop);
         btnPlay.onClick.AddListener(OnclickPlay);
+        if (DynamicData.Ins.Music)
+            GameManager.Ins.bgMusic.Play();
+        else
+            GameManager.Ins.bgMusic.Stop();
     }
     public override void Init(object[] prametter)
     {
@@ -38,10 +42,7 @@ public class UIHomeControl : BaseUIControl
             CanvaManager.Ins.isAnimRunning = false;
             pre.Close();
         });
-        if (DynamicData.Ins.Music)
-            GameManager.Ins.bgMusic.Play();
-        else
-            GameManager.Ins.bgMusic.Stop();
+        
     }
 
     private void OnclickLevel()

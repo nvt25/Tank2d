@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InitOnNewGame : MonoBehaviour
+public class InitOnNewGame : Singleton<InitOnNewGame>
 {
     [System.Serializable]
     public class infoBullet
@@ -20,17 +20,13 @@ public class InitOnNewGame : MonoBehaviour
     }
     public GameObject coinPrefab;
     public GameObject tankVestigePrefab;
-    public static InitOnNewGame Ins;
     public List<infoBullet> listBulletsPrefab;
     public List<infoVFX> listVFXsPrefab;
     public Dictionary<string, Queue<BulletController>> bullets;
     public Dictionary<string, Queue<GameObject>> VFX_Anim;
     public Queue<GameObject> coins;
     public Queue<GameObject> TankVistige;
-    private void Awake()
-    {
-        Ins = this;
-    }
+ 
     void Start()
     {
         bullets = new Dictionary<string, Queue<BulletController>>();

@@ -4,9 +4,8 @@ using UnityEngine;
 
 namespace BASE.UI
 {
-    public class CanvaManager : MonoBehaviour
+    public class CanvaManager : Singleton<CanvaManager>
     {
-        public static CanvaManager Ins;
         public bool isAnimRunning;
         public Action<float> SlideBarHeaty;
         private List<Transform> listUIParent = new List<Transform>();
@@ -14,20 +13,9 @@ namespace BASE.UI
         private string UIPath;
         public UIGamePlay uIGamePlay;
 
-        private void Awake()
+        protected override  void Awake()
         {
-            if (Ins == null)
-            {
-                Ins = this;
-                DontDestroyOnLoad(transform.root.gameObject);
-            }
-            else
-            {
-                if (Ins != this)
-                {
-                    Destroy(gameObject);
-                }
-            }
+            base.Awake();
             LoadLayerUI();
         }
 

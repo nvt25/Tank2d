@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DynamicData : MonoBehaviour
+public class DynamicData : Singleton<DynamicData>
 {
-    public static DynamicData Ins;
     public bool isLoadedBase = false;
     public UnityEngine.Events.UnityEvent loadDataPlayer;
     private bool vibrate;
@@ -18,10 +17,6 @@ public class DynamicData : MonoBehaviour
     public List<PlayerMode> listModelPlayer = new List<PlayerMode>();
     public PlayerMode selectedId;
 
-    private void Awake()
-    {
-        Ins = this;
-    }
 
     private void Start()
     {
@@ -29,7 +24,7 @@ public class DynamicData : MonoBehaviour
         BASE.UI.CanvaManager.Ins.OpenUI(StaticData.LOADING, new object[] { });
         vibrate = PlayerPrefs.GetInt(StaticData.Vibrate, 1) == 1 ? true : false;
         music = PlayerPrefs.GetInt(StaticData.Music, 1) == 1 ? true : false;
-        coin = PlayerPrefs.GetInt(StaticData.Coin, 2000);
+        coin = PlayerPrefs.GetInt(StaticData.Coin, 8888);
         openLevel = PlayerPrefs.GetInt(StaticData.Level, 1);
         currentLevel = openLevel;
         isLoadedBase = true;
