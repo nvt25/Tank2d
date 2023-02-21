@@ -83,7 +83,6 @@ public class EnemyControl : ControllerBehaviour
         if (DynamicData.Ins.Vibrate)
         {
             Handheld.Vibrate();
-            Debug.Log("RUng");
         }
         InitOnNewGame.Ins.SpanwVfx("Explode", transform);
         gameObject.SetActive(false);
